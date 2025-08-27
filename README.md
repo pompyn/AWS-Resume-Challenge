@@ -1,15 +1,3 @@
-# 🌩 Cloud Resume Challenge
-
-This project is my implementation of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/).  
-It takes a traditional resume and turns it into a fully deployed, cloud-native web application — complete with front end, back end, database, and CI/CD automation.
-
----
-
-## 📄 Live Demo
-🔗 [nimaweatherly.org](https://nimaweatherly.org)  
-
----
-
 ## 🚀 Project Milestones
 
 - **Week 0 – Certification Prep**
@@ -18,18 +6,23 @@ It takes a traditional resume and turns it into a fully deployed, cloud-native w
 
 - **Week 1 – Front End**
   - Built resume in HTML & styled with CSS  
-  - Deployed to Azure Storage with custom domain + DNS  
-  - Integrated Azure CDN for global performance  
+  - Deployed to AWS S3 with custom domain + Route 53  
+  - Integrated CloudFront for global performance  
 
 - **Week 2 – Back End**
-  - Built visitor counter API using Azure Functions  
-  - Connected Cosmos DB for persistence  
+  - Built visitor counter API using AWS Lambda  
+  - Connected DynamoDB for persistence  
 
 - **Week 3 – Integration + Automation**
   - Connected front end with visitor counter API  
   - Configured GitHub Actions CI/CD for automated deployments  
 
-- **Week 4 – Polish & Reflection**
+- **Week 4 – Multi-Cloud Expansion**
+  - Automated cross-cloud backup from S3 to Azure Blob Storage  
+  - Configured cost management in both AWS & Azure  
+  - Implemented governance/security policies across both platforms  
+
+- **Week 5 – Polish & Reflection**
   - Wrote blog posts documenting my journey  
   - Enhanced site design, security, and accessibility  
 
@@ -37,18 +30,46 @@ It takes a traditional resume and turns it into a fully deployed, cloud-native w
 
 ## 🛠 Tech Stack
 
-- **Cloud Platform:** Azure (Storage, Functions, Cosmos DB, CDN, DNS)  
+- **Cloud Platform (Primary):** AWS (S3, Lambda, DynamoDB, CloudFront, Route 53)  
+- **Cloud Platform (Secondary):** Azure (Blob Storage, Cost Management, Policy, Resource Tagging)  
 - **Front End:** HTML5, CSS3, JavaScript  
-- **Back End:** Azure Functions (Python/Node)  
-- **Database:** Azure Cosmos DB  
+- **Back End:** AWS Lambda (Python/Node.js)  
+- **Database:** Amazon DynamoDB  
 - **CI/CD:** GitHub Actions  
-- **Other:** ACM SSL, DNS, Infrastructure as Code (if applicable)  
+- **Other:** AWS Certificate Manager (ACM) SSL, Route 53 DNS, Infrastructure as Code (CloudFormation/Terraform)  
+
+---
+
+## ☁️ Azure Integration (Backup/DR Functionality)
+
+### 1. Cross-Cloud Backup and Recovery
+- **Project:** Automated process to back up S3-hosted website data to Azure Blob Storage  
+- **Services:** AWS CLI/SDK + Azure Storage Account (Blob Storage)  
+- **Skills Demonstrated:**  
+  - AZ-900: Azure Storage solutions  
+  - AWS Foundational: S3 operations with CLI  
+  - Multi-Cloud: Cross-platform scripting (Python)  
+
+### 2. Multi-Cloud Cost Management
+- **Project:** Configure native cost tracking on both AWS & Azure  
+- **Services:** AWS Cost Explorer + Azure Cost Management  
+- **Skills Demonstrated:**  
+  - AZ-900: Cost management and reporting  
+  - Multi-Cloud: Spend tracking across vendors  
+
+### 3. Multi-Cloud Governance and Security
+- **Project:** Implement governance/security policies across both clouds  
+- **Services:** AWS IAM policy + Azure Policy (resource tagging)  
+- **Skills Demonstrated:**  
+  - AZ-900: Azure Policy & tagging  
+  - AWS Foundational: IAM roles and permissions  
+  - Multi-Cloud: Consistent governance across providers  
 
 ---
 
 ## 📸 Screenshots
 
-(Add one or two screenshots of your site here — e.g., homepage, visitor counter)
+(Add one or two screenshots of your site here — e.g., homepage, visitor counter, backup demo)
 
 ---
 
@@ -57,15 +78,18 @@ It takes a traditional resume and turns it into a fully deployed, cloud-native w
 - Cloud projects rarely go in a straight line — DNS, SSL, and CDN required patience and debugging.  
 - Automating deployments gave me confidence to iterate faster.  
 - Documenting progress weekly (blog/README) helped me see growth and explain choices clearly.  
+- Multi-cloud integration showed me how to connect platforms for resilience and cost awareness.  
 
 ---
 
 ## 📌 Next Steps
 
-- Add more automation and monitoring (logging, alerts).  
+- Add monitoring and alerting across both AWS and Azure.  
 - Expand the resume site into a small portfolio hub.  
+- Publish a blog post on the **benefits of multi-cloud resilience**.  
 
 ---
+
 
 ## 📧 Contact
 
